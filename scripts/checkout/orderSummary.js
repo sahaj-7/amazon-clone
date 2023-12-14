@@ -36,7 +36,7 @@ export function renderOrderSummary() {
             ${matchingProduct.name}
           </div>
           <div class="product-price">
-            $${formatCurrency(matchingProduct.priceCents)}
+            &#8377 ${formatCurrency(matchingProduct.priceCents)}
           </div>
           <div class="product-quantity">
             <span>
@@ -68,7 +68,7 @@ export function renderOrderSummary() {
       const today = dayjs();
       const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
       const dateString = deliveryDate.format('dddd, MMMM D');
-      const priceString = deliveryOption.priceCents === 0 ? 'FREE' : `$${formatCurrency(deliveryOption.priceCents)} -`;
+      const priceString = deliveryOption.priceCents === 0 ? 'FREE' : `&#8377 ${formatCurrency(deliveryOption.priceCents)} -`;
 
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
